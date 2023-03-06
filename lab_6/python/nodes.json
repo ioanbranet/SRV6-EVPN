@@ -1,0 +1,65 @@
+[
+    {
+        "key": "2_0_0_0000.0000.0001",
+        "name": "xrd01",
+        "router_id": "10.0.0.1",
+        "city": "AMS001",
+        "address": "Frederiksplein 42, 1017 XN Amsterdam, Netherlands",
+        "prefix_sid": 100001,
+        "srv6_sid": "fc00:0:1111::"
+    },
+    {
+        "key": "2_0_0_0000.0000.0002",
+        "name": "xrd02",
+        "router_id": "10.0.0.2",
+        "city": "BML001",
+        "address": "Albrechtstra\u00dfe 110, 12103 Berlin, Germany",
+        "prefix_sid": 100002,
+        "srv6_sid": "fc00:0:2222::"
+    },
+    {
+        "key": "2_0_0_0000.0000.0003",
+        "name": "xrd03",
+        "router_id": "10.0.0.3",
+        "city": "IEV001",
+        "address": "O.Gonchara str, Kyiv,Ukraine",
+        "prefix_sid": 100003,
+        "srv6_sid": "fc00:0:3333::"
+    },
+    {
+        "key": "2_0_0_0000.0000.0004",
+        "name": "xrd04",
+        "router_id": "10.0.0.4",
+        "city": "IST001",
+        "address": "B\u00fcy\u00fckdere Cd No:121\u015ei\u015fli, Turkey, 34394",
+        "prefix_sid": 100004,
+        "srv6_sid": "fc00:0:4444::"
+    },
+    {
+        "key": "2_0_0_0000.0000.0005",
+        "name": "xrd05",
+        "router_id": "10.0.0.5",
+        "city": "LHR001",
+        "address": "Second Floor, Trinity Ct, Trinity St, Peterborough PE1 1DA, United Kingdom",
+        "prefix_sid": 100005,
+        "srv6_sid": "fc00:0:5555::"
+    },
+    {
+        "key": "2_0_0_0000.0000.0006",
+        "name": "xrd06",
+        "router_id": "10.0.0.6",
+        "city": "CDG001",
+        "address": "18 Rue la Bo\u00e9tie, 75008 Paris, France",
+        "prefix_sid": 100006,
+        "srv6_sid": "fc00:0:6666::"
+    },
+    {
+        "key": "2_0_0_0000.0000.0007",
+        "name": "xrd07",
+        "router_id": "10.0.0.7",
+        "city": "FCO001",
+        "address": "Via dei Tizii, 2C, 00185 Roma Italy",
+        "prefix_sid": 100007,
+        "srv6_sid": "fc00:0:7777::"
+    }
+]

@@ -1,0 +1,109 @@
+
+# Run this script to generate the lab_1 docker-compose-lab_1.yml file
+# ../xr-compose -f docker-compose-lab_1.yml -i ios-xr/xrd-control-plane:7.8.1
+
+services:
+
+# XRd containers
+  xrd01:
+    xr_startup_cfg: config/xrd01.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Gi0/0/0/2
+      - Gi0/0/0/3
+      - Mg0/RP0/CPU0/0
+
+  xrd02:
+    xr_startup_cfg: config/xrd02.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Gi0/0/0/2
+      - Gi0/0/0/3
+      - Mg0/RP0/CPU0/0
+  xrd03:
+    xr_startup_cfg: config/xrd03.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Gi0/0/0/2
+      - Gi0/0/0/3
+      - Mg0/RP0/CPU0/0
+  xrd04:
+    xr_startup_cfg: config/xrd04.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Gi0/0/0/2
+      - Gi0/0/0/3
+      - Mg0/RP0/CPU0/0
+  xrd05:
+    xr_startup_cfg: config/xrd05.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Gi0/0/0/2
+      - Gi0/0/0/3
+      - Mg0/RP0/CPU0/0
+  xrd06:
+    xr_startup_cfg: config/xrd06.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Gi0/0/0/2
+      - Gi0/0/0/3
+      - Mg0/RP0/CPU0/0
+  xrd07:
+    xr_startup_cfg: config/xrd07.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Gi0/0/0/2
+      - Gi0/0/0/3
+      - Mg0/RP0/CPU0/0
+  xrd08:
+    xr_startup_cfg: config/xrd08.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Gi0/0/0/2
+      - Gi0/0/0/3
+      - Mg0/RP0/CPU0/0
+  xrd09:
+    xr_startup_cfg: config/xrd09.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Gi0/0/0/2
+      - Gi0/0/0/3
+      - Mg0/RP0/CPU0/0
+
+xr_l2networks:
+  - ["xrd01:Gi0/0/0/0", "xrd08:Gi0/0/0/0"]
+  - ["xrd01:Gi0/0/0/1", "xrd02:Gi0/0/0/0"]
+  - ["xrd01:Gi0/0/0/2", "xrd05:Gi0/0/0/0"]
+  - ["xrd02:Gi0/0/0/1", "xrd03:Gi0/0/0/0"]
+  - ["xrd02:Gi0/0/0/2", "xrd06:Gi0/0/0/1"]
+  - ["xrd03:Gi0/0/0/1", "xrd04:Gi0/0/0/0"]
+  - ["xrd04:Gi0/0/0/1", "xrd07:Gi0/0/0/1"]
+  - ["xrd04:Gi0/0/0/2", "xrd05:Gi0/0/0/1"]
+  - ["xrd05:Gi0/0/0/2", "xrd06:Gi0/0/0/2"]
+  - ["xrd06:Gi0/0/0/0", "xrd07:Gi0/0/0/2"]
+  - ["xrd07:Gi0/0/0/0", "xrd09:Gi0/0/0/0"]
+
+networks:
+  mgmt:
+    xr_interfaces:
+      - xrd01:Mg0/RP0/CPU0/0
+      - xrd02:Mg0/RP0/CPU0/0
+      - xrd03:Mg0/RP0/CPU0/0
+      - xrd04:Mg0/RP0/CPU0/0
+      - xrd05:Mg0/RP0/CPU0/0
+      - xrd06:Mg0/RP0/CPU0/0
+      - xrd07:Mg0/RP0/CPU0/0
+      - xrd08:Mg0/RP0/CPU0/0
+      - xrd09:Mg0/RP0/CPU0/0
+    ipam:
+      config:
+        - subnet: 10.254.254.0/24

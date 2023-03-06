@@ -9,3 +9,5 @@ docker volume rm xrd04
 docker volume rm xrd05
 docker volume rm xrd06
 docker volume rm xrd07
+docker volume rm xrd08
+docker volume rm xrd09
